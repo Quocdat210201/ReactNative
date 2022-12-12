@@ -36,6 +36,9 @@ export default {
     },
     nameScreen: {
         Home: 'HomeScreen',
-        Login: 'LoginScreen'
+        Login: 'LoginScreen',
+        Profile: 'ProfileScreen',
+        PhoneBook: 'PhoneBookScreen',
+        DetailPhoneBook: 'DetailPhoneBook',
     }
 }

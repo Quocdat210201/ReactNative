@@ -9,5 +9,6 @@ import Login from './app/components/authentication/login/LoginScreen'
 import Register from './app/components/authentication/register/RegisterScreen'
 import Home from './app/components/home/HomeScreen'
 import RootNavigation from './app/components/rootNavigation/RootNavigation';
+import PhoneBook from './app/components/telephoneDirectory/phoneBook';
 
-AppRegistry.registerComponent(appName, () =>Home)
+AppRegistry.registerComponent(appName, () => RootNavigation)

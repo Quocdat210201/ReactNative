@@ -17,6 +17,7 @@
     "expo-linear-gradient": "^12.0.1",
     "react": "18.1.0",
     "react-native": "0.70.5",
+    "react-native-dialog-input": "^1.0.8",
     "react-native-linear-gradient": "^2.6.2",
     "react-native-material-design": "^0.3.7",
     "react-native-paper": "^4.12.5",

@@ -61,7 +61,7 @@ const carItem = [
   },
 ];
 
-const LoginScreen = () => {
+const HomeScreen = () => {
 
   return (
     <View style={styles.container}>
@@ -175,4 +175,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default LoginScreen;
+export default HomeScreen;
