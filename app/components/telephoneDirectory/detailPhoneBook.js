@@ -23,18 +23,20 @@ const DetailPhoneBook = () => {
   const route = useRoute();
   const phoneItem = route.params?.phoneItem;
   const [visible, setVisible] = useState(false);
-  const [name, setName] = useState(phoneItem?.name);
-  const [phoneNumber, setPhoneNumber] = useState(phoneItem?.phoneNumber);
+  const [name, setName] = useState(`${phoneItem?.first_name} ${phoneItem?.last_name}`);
+  const [email, setEmail] = useState(phoneItem?.email);
+
+  console.log(phoneItem.avatar);
 
   return (
     <View style={styles.rootView}>
       <View style={styles.contactView}>
         <TouchableOpacity style={styles.buttonAvatar}>
-          <Image style={styles.avatarImg} source={phoneItem?.avatar} />
+          <Image style={styles.avatarImg} source={{uri : phoneItem?.avatar}} />
         </TouchableOpacity>
         <View style={styles.contentView}>
           <Text style={styles.nameView}>{name}</Text>
-          <Text styles={styles.phoneNumber}>{phoneNumber}</Text>
+          <Text styles={styles.email}>{email}</Text>
         </View>
         <View style={styles.buttonView}>
           <TouchableOpacity style={styles.callIcon}>
@@ -61,8 +63,8 @@ const DetailPhoneBook = () => {
           />
           <TextInput
             style={styles.dialogInput}
-            onChangeText={value => setPhoneNumber(value)}
-            value={phoneNumber}
+            onChangeText={value => setEmail(value)}
+            value={email}
             autoCapitalize={'none'}
           />
         </Dialog.Content>
@@ -111,7 +113,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     fontWeight: 'bold',
   },
-  phoneNumber: {
+  email: {
     fontSize: 16,
   },
   buttonView: {

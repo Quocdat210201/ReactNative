@@ -26,11 +26,11 @@ const PhoneBookItems = ({phoneItem}) => {
   return (
     <TouchableOpacity onPress={handleTapPhoneBookItem} style={styles.container}>
       <View style={styles.content}>
-        <Image style={styles.contentAvatar} source={phoneItem?.avatar}></Image>
+        <Image style={styles.contentAvatar} source={{ uri : phoneItem?.avatar}}></Image>
         <View style={styles.contentInfo}>
-          <Text style={styles.contentInfoName}>{phoneItem?.name}</Text>
+          <Text style={styles.contentInfoName}>{`${phoneItem?.first_name} ${phoneItem?.last_name}`}</Text>
           <Text style={styles.contentInfoNumberPhone}>
-            {phoneItem?.phoneNumber}
+            {phoneItem?.email}
           </Text>
         </View>
       </View>
